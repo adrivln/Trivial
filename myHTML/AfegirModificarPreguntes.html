@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AfegirModificarPreguntes</title>
+    <script src="../myJS/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../myCSS/Custom.css">
+    <script src="../myJS/AfegirModificarPreguntes.js" defer></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../myJS/Logout.js" defer></script>
+
+</head>
+<body class="bg-light">
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="Inicio.html">Inici</a></li>
+                <li><a class="dropdown-item" href="Registro.html">Registre</a></li>
+                <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="crearPartida.html">Crear Partida</a></li>
+                <li><a class="dropdown-item" href="mostrarPreguntas.html">Mostrar Preguntes</a></li>
+                <li><a class="dropdown-item" href="AfegirModificarPreguntes.html">Modificar Preguntes</a></li>
+                <li><a class="dropdown-item" href="jugarPartida.html">Jugar Partida</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li id="nav-logout" style="display: none;">
+                    <a class="dropdown-item text-danger" href="#" onclick="logout()">Tancar Sessió</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container py-5">
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Crear Nova Pregunta</h3>
+            <form id="formPregunta">
+                <div class="mb-3">
+                    <label for="id" class="form-label">ID</label>
+                    <input type="number" id="id" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="descripcio" class="form-label">Enunciat</label>
+                    <textarea id="descripcio" class="form-control" rows="2" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tema" class="form-label">Tema (1–6)</label>
+                    <input type="number" id="tema" class="form-control" min="1" max="6" required>
+                </div>
+                <div class="mb-3">
+                    <label for="resp1" class="form-label">Resposta 1</label>
+                    <input type="text" id="resp1" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="resp2" class="form-label">Resposta 2</label>
+                    <input type="text" id="resp2" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="resp3" class="form-label">Resposta 3</label>
+                    <input type="text" id="resp3" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="resp4" class="form-label">Resposta 4</label>
+                    <input type="text" id="resp4" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="solucio" class="form-label">Índex solució (1–4)</label>
+                    <input type="number" id="solucio" class="form-control" min="1" max="4" required>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-success" onclick="crearPregunta()">
+                        Afegir Pregunta
+                    </button>
+                    <button type="button" class="btn btn-warning" onclick="modificarPregunta()">
+                        Modificar Pregunta
+                    </button>
+                </div>
+            </form>
+
+            <p id="resultado" class="mt-4 text-center"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

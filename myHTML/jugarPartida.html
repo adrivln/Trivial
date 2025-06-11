@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jugarPartida</title>
+    <script src="../myJS/jquery-3.6.0.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../myJS/Logout.js" defer></script>
+    <script src="../myJS/jugarPartida.js" defer></script>
+    <link rel="stylesheet" href="../myCSS/Ruleta.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../myCSS/Custom.css">
+
+</head>
+<body class="full-height">
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="Inicio.html">Inici</a></li>
+                <li><a class="dropdown-item" href="Registro.html">Registre</a></li>
+                <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="crearPartida.html">Crear Partida</a></li>
+                <li><a class="dropdown-item" href="mostrarPreguntas.html">Mostrar Preguntes</a></li>
+                <li><a class="dropdown-item" href="AfegirModificarPreguntes.html">Modificar Preguntes</a></li>
+                <li><a class="dropdown-item" href="jugarPartida.html">Jugar Partida</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li id="nav-logout" style="display: none;">
+                    <a class="dropdown-item text-danger" href="#" onclick="logout()">Tancar Sessió</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="d-flex align-items-center justify-content-center h-100">
+    <div class="card-game p-4 text-center">
+        <!-- VALIDAR PARTIDA -->
+        <div class="mb-4">
+            <input id="partidaId" type="number" class="form-control d-inline-block w-50"
+                   placeholder="ID Partida">
+            <button class="btn btn-validate ms-2" onclick="validarPartida()">Validar</button>
+            <p id="mensaje" class="mt-2"></p>
+        </div>
+        <!-- Ruleta -->
+        <button id="btnGirar" class="btn btn-spin mb-4" onclick="clica()" disabled>Girar</button>
+        <div id="container-ruletes" class="text-center">
+            <div id="container">
+                <div class="fletxa"></div>
+                <div id="pieContainer" class="wheel wheel-large">
+                    <div id="slice1" class="slice-wrapper">
+                    </div>
+                    <div id="slice2" class="slice-wrapper">
+                    </div>
+                    <div id="slice3" class="slice-wrapper">
+                    </div>
+                    <div id="slice4" class="slice-wrapper">
+                    </div>
+                    <div id="slice5" class="slice-wrapper">
+                    </div>
+                    <div id="slice6" class="slice-wrapper">
+                    </div>
+                </div>
+
+            </div>
+            <div id="container2">
+                <div class="fletxa"></div>
+                <div id="pieContainer2" class="wheel wheel-small">
+                    <div id="slicea" class="slice2-wrapper">
+                    </div>
+                    <div id="sliceb" class="slice2-wrapper">
+                    </div>
+                    <div id="slicec" class="slice2-wrapper">
+                    </div>
+                    <div id="sliced" class="slice2-wrapper">
+                    </div>
+                </div>
+            </div>
+            <!-- LLEGENDA -->
+            <div class="row text-start mt-4">
+                <div class="col-md-4">
+                    <h5>Grup 1</h5>
+                    <ul class="legend-list">
+                        <li><span class="color-swatch fuchsia"></span> Fuchsia: Tema 1</li>
+                        <li><span class="color-swatch cyan"></span> Cyan: Tema 2</li>
+                        <li><span class="color-swatch lime"></span> Lime: Tema 3</li>
+                        <li><span class="color-swatch yellow"></span> Groc: Tema 4</li>
+                        <li><span class="color-swatch red"></span> Vermell: Tema 5</li>
+                        <li><span class="color-swatch hotpink"></span> Hotpink: Tema 6</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Grup 2</h5>
+                    <ul class="legend-list">
+                        <li><span class="color-swatch fuchsia"></span> Fuchsia: Pregunta Normal</li>
+                        <li><span class="color-swatch cyan"></span> Cyan: Pregunta Formatge</li>
+                        <li><span class="color-swatch lime"></span> Lime: Es resten 50 punts</li>
+                        <li><span class="color-swatch yellow"></span> Groc: Es sumen 50 punts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p id="resultat" class="mt-3"></p>
+    </div>
+</div>
+</body>
+</html>

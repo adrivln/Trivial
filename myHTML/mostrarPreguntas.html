@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mostrarPreguntes</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../myCSS/Custom.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../myJS/Logout.js" defer></script>
+</head>
+<body class="bg-light">
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="Inicio.html">Inici</a></li>
+                <li><a class="dropdown-item" href="Registro.html">Registre</a></li>
+                <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="crearPartida.html">Crear Partida</a></li>
+                <li><a class="dropdown-item" href="mostrarPreguntas.html">Mostrar Preguntes</a></li>
+                <li><a class="dropdown-item" href="AfegirModificarPreguntes.html">Modificar Preguntes</a></li>
+                <li><a class="dropdown-item" href="jugarPartida.html">Jugar Partida</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li id="nav-logout" style="display: none;">
+                    <a class="dropdown-item text-danger" href="#" onclick="logout()">Tancar Sessió</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container py-5">
+    <h1 class="mb-4 text-center">Preguntes de Sostenibilitat</h1>
+
+    <!-- Tema 1 -->
+    <section class="mb-5">
+        <h3 class="mb-3">Tema 1</h3>
+        <div class="mb-4">
+            <p><strong>1. Segons l’Informe Brundtland, què és la sostenibilitat?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Maximitzar l’extracció de recursos naturals</li>
+                <li class="list-group-item list-group-item-success">Cobrir necessitats presents sense comprometre les
+                    futures
+                </li>
+                <li class="list-group-item">Augmentar la producció industrial</li>
+                <li class="list-group-item">Eliminar completament els residus</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <p><strong>2. Quin aspecte NO forma part dels pilars de la sostenibilitat?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Ecologia</li>
+                <li class="list-group-item">Economia</li>
+                <li class="list-group-item list-group-item-success">Consumisme il·limitat</li>
+                <li class="list-group-item">Equitat social</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tema 2 -->
+    <section class="mb-5">
+        <h3 class="mb-3">Tema 2</h3>
+        <div class="mb-4">
+            <p><strong>1. Quin és l’objectiu principal del Green Deal europeu?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Reforçar la unió monetària</li>
+                <li class="list-group-item list-group-item-success">Fer la UE climàticament neutra el 2050</li>
+                <li class="list-group-item">Abolir tots els aranzels</li>
+                <li class="list-group-item">Ampliar la UE a nous membres</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <p><strong>2. Quina llei catalana regula el canvi climàtic?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">Llei del Canvi Climàtic de Catalunya (2017)</li>
+                <li class="list-group-item">Llei de Prevenció de Residus</li>
+                <li class="list-group-item">Llei d’Aigua Potable</li>
+                <li class="list-group-item">Llei de Mobilitat Urbana</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tema 3 -->
+    <section class="mb-5">
+        <h3 class="mb-3">Tema 3</h3>
+        <div class="mb-4">
+            <p><strong>1. Quin és un dels principals impactes de les emissions de GEH?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success">Escalfament global</li>
+                <li class="list-group-item">Reducció del nivell del mar</li>
+                <li class="list-group-item">Augment de biodiversitat</li>
+                <li class="list-group-item">Protecció de corals</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <p><strong>2. Quina pràctica agrícola REDUEIX l’empremta ambiental?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Monocultius intensius</li>
+                <li class="list-group-item list-group-item-success">Agricultura sostenible amb rotació de cultius</li>
+                <li class="list-group-item">Desforestació per pastures</li>
+                <li class="list-group-item">Ús massiu de fertilitzants</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tema 4 -->
+    <section class="mb-5">
+        <h3 class="mb-3">Tema 4</h3>
+        <div class="mb-4">
+            <p><strong>1. Quina pràctica és un exemple de gestió de residus dins la sostenibilitat ambiental?</strong>
+            </p>
+            <ul class="list-group">
+                <li class="list-group-item">Ús exclusiu de plàstics d’un sol ús</li>
+                <li class="list-group-item list-group-item-success">Aplicar les 3R: Reduir, Reutilitzar, Reciclar</li>
+                <li class="list-group-item">Incrementar la producció de residus</li>
+                <li class="list-group-item">Transferir els residus a un altre mercat</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <p><strong>2. Quin element forma part de la sostenibilitat social?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Increment de l’explotació de recursos</li>
+                <li class="list-group-item list-group-item-success">Garantir condicions laborals justes</li>
+                <li class="list-group-item">Reduir la diversitat al lloc de treball</li>
+                <li class="list-group-item">Evitar la participació comunitària</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tema 5-->
+    <section class="mb-5">
+        <h3 class="mb-3">Tema 5</h3>
+        <div class="mb-4">
+            <p><strong>1. Quin principi NO és part de l’economia circular?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Disseny per a la longevitat</li>
+                <li class="list-group-item">Ús de models de serveis en lloc de productes</li>
+                <li class="list-group-item list-group-item-success">Generar residus sense possibilitat de reciclatge
+                </li>
+                <li class="list-group-item">Reduir, Reutilitzar i Reciclar</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <p><strong>2. Quin objectiu assenyala un model d’economia verda?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Augmentar les emissions de CO₂</li>
+                <li class="list-group-item list-group-item-success">Millorar el benestar humà reduint riscos
+                    ambientals
+                </li>
+                <li class="list-group-item">Eliminar totes les normes socials</li>
+                <li class="list-group-item">Prioritzar el benefici econòmic immediat</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tema 6-->
+    <section class="mb-5">
+        <h3 class="mb-3">Tema 6</h3>
+        <div class="mb-4">
+            <p><strong>1. Quin avantatge aconsegueix una empresa amb un pla de sostenibilitat robust?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Augmentar les emissions de carboni</li>
+                <li class="list-group-item list-group-item-success">Millorar la reputació i atracció d’inversors</li>
+                <li class="list-group-item">Ignorar les regulacions ambientals</li>
+                <li class="list-group-item">Generar costos operatius més alts</li>
+            </ul>
+        </div>
+        <div class="mb-4">
+            <p><strong>2. Quin component forma part d’un informe de sostenibilitat?</strong></p>
+            <ul class="list-group">
+                <li class="list-group-item">Llista de clients VIP</li>
+                <li class="list-group-item">Detalls de vendes comercials</li>
+                <li class="list-group-item list-group-item-success">Indicadors de rendiment (KPIs) de sostenibilitat
+                </li>
+                <li class="list-group-item">Estratègies de màrqueting digital</li>
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../myCSS/Inicio.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../myJS/Logout.js" defer></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="Inicio.html">Inici</a></li>
+                <li><a class="dropdown-item" href="Registro.html">Registre</a></li>
+                <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="crearPartida.html">Crear Partida</a></li>
+                <li><a class="dropdown-item" href="mostrarPreguntas.html">Mostrar Preguntes</a></li>
+                <li><a class="dropdown-item" href="AfegirModificarPreguntes.html">Modificar Preguntes</a></li>
+                <li><a class="dropdown-item" href="jugarPartida.html">Jugar Partida</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li id="nav-logout" style="display: none;">
+                    <a class="dropdown-item text-danger" href="#" onclick="logout()">Tancar Sessió</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="full-height">
+    <div class="menu-card col-10 col-md-6 col-lg-4">
+        <h1>🌱 Trivial de la Sostenibilitat</h1>
+        <a href="Registro.html" class="btn btn-success">Registre</a>
+        <a href="Login.html" class="btn btn-primary">Login</a>
+        <hr>
+        <a href="crearPartida.html" class="btn btn-outline-secondary">Crear Partida</a>
+        <a href="mostrarPreguntas.html" class="btn btn-outline-secondary">Mostrar Preguntes</a>
+        <a href="AfegirModificarPreguntes.html" class="btn btn-outline-secondary">Afegir/Modificar Preguntes</a>
+        <a href="jugarPartida.html" class="btn btn-outline-secondary">Jugar Partida</a>
+    </div>
+</div>
+</body>
+</html>

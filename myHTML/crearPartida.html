@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>crearPartida</title>
+    <script src="../myJS/jquery-3.6.0.js"></script>
+    <script src="../myJS/crearPartida.js" defer></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../myCSS/Custom.css">
+    <script src="../myJS/Logout.js" defer></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="Inicio.html">Inici</a></li>
+                <li><a class="dropdown-item" href="Registro.html">Registre</a></li>
+                <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="crearPartida.html">Crear Partida</a></li>
+                <li><a class="dropdown-item" href="mostrarPreguntas.html">Mostrar Preguntes</a></li>
+                <li><a class="dropdown-item" href="AfegirModificarPreguntes.html">Modificar Preguntes</a></li>
+                <li><a class="dropdown-item" href="jugarPartida.html">Jugar Partida</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li id="nav-logout" style="display: none;">
+                    <a class="dropdown-item text-danger" href="#" onclick="logout()">Tancar Sessió</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh">
+    <div class="card shadow-sm w-100" style="max-width: 400px">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Crear Partida</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Posa una descripció per resgistrar la partida</label>
+                    <input type="text" class="form-control" id="description" placeholder="Descripció" required>
+                </div>
+            </form>
+            <br>
+            <button type="button" class="btn btn-primary w-100" onclick="crearPartida()">Crear Partida</button>
+            <p id="resultado" class="mt-4 text-center"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
